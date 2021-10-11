@@ -33,8 +33,8 @@ public class Main {
         //Lectura de datos de entrada desde el archivo en cuestión
         DatosEntrada datos = DatosEntrada.getInstance(pathArchivoDatos);
 
-        //ejecutarAlgoritmo(datos);
-        ejecutarAlgCalibracion(datos,10);
+        ejecutarAlgoritmo(datos);
+        //ejecutarAlgCalibracion(datos,20);
         //imprimirCombParam();
     }
 
@@ -74,8 +74,7 @@ public class Main {
             StringBuilder salida = new StringBuilder();
             salida.append(config.getNumIter()).append(";").append(config.getTamPob()).append(";")
                     .append(config.getPorcCromCruzados()).append(";").append(config.getProbMut())
-                    .append(";").append(config.getProbBusq()).append(";").append(config.getPorcHijosIngresados())
-                    .append(";").append(config.getCantVecinosEvaluados()).append(";")
+                    .append(";").append(config.getPorcHijosIngresados()).append(";")
                     .append(config.getPorcIterEstanc()).append(";|;");
             AlgoritmoGenetico algMem = new AlgoritmoGenetico(config.getNumIter(), config.getTamPob(), config.getPorcCromCruzados(),
                     config.getProbMut(), config.getPorcHijosIngresados(), config.getPorcIterEstanc());
@@ -108,9 +107,9 @@ public class Main {
         int[] tamPob = {100,200};
         float[] porcCromCruzados = {0.5f,0.75f};
         float[] probMut = {0.5f,0.75f,1.0f};
-        float[] probBusq = {0.5f,0.6f};
-        float[] porcHijosIngresados = {0.75f,0.9f};
-        int[] cantVecinos = {40,50};
+        float[] probBusq = {0f};
+        float[] porcHijosIngresados = {0.5f,0.75f,0.9f};
+        int[] cantVecinos = {1};
         float porcIterEstanc = 0.3f;
 
         for(int iter: numIter){
