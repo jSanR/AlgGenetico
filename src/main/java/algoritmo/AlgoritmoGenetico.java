@@ -324,7 +324,6 @@ public class AlgoritmoGenetico {
                 continue;
             }
             //Se realiza la mutación
-            // 0 1 2 3 4 5 6 7
             //Empezamos por copiar el cromosoma y el arreglo de índices
             int numTablas = DatosEntrada.getInstance(null).getNumTablas();
             int[] arrCromMut = arrHijos[i].getCromosoma().clone();

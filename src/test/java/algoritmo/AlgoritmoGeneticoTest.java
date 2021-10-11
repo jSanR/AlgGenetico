@@ -44,7 +44,7 @@ class AlgoritmoGeneticoTest {
     @Test
     @Order(value = 2)
     @DisplayName("Comprueba que la la selección se realiza correctamente")
-    void seleccionXRuleta() {
+    void seleccionXTorneo() {
         AlgoritmoGenetico algEval = new AlgoritmoGenetico();
         algEval.inicializarPoblacion();
         SplittableRandom genRandom = new SplittableRandom();
@@ -71,7 +71,7 @@ class AlgoritmoGeneticoTest {
     @RepeatedTest(value = 5)
     @Order(value = 4)
     @DisplayName("Comprueba que el la mutación genera cromosomas válidos")
-    void swapMutation() {
+    void inversionMutation() {
         AlgoritmoGenetico algEval = new AlgoritmoGenetico();
         algEval.inicializarPoblacion();
         SplittableRandom genRandom = new SplittableRandom();
